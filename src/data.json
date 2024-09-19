@@ -1,0 +1,23 @@
+[
+    {
+        "project":"Project A",
+        "percentComplete":"50"
+    },
+
+    {
+        "project":"Project B",
+        "percentComplete":"65"
+    },
+    {
+        "project":"Project C",
+        "percentComplete":"35"
+    },
+    {
+        "project":"Project D",
+        "percentComplete":"90"
+    },
+    {
+        "project":"Project E",
+        "percentComplete":"70"
+    }
+]
