@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import data1 from './data.json'
 
 function Comp() {
     const data= data1;
+    const [color,setColor] = useState('');
+    const [minRange, setMinRange]= useState('');
+    const [maxRange,setmaxRange] =useState('');
   return (
     <>
        <div className='text-boxes'>
@@ -12,7 +15,7 @@ function Comp() {
        </div>
 
        {
-        data.map((card)=>(<bar project={card.project} percentComplete={card.percentComplete}/>))
+        data.map((card,index)=>(<bar key={index} project={card.project} percentComplete={card.percentComplete}/>))
        }
 
     

@@ -1,13 +1,33 @@
 import React from 'react'
 import { useState } from 'react'
 
-function bar({project,percentComplete}) {
+function bar({project,percentComplete, customColor}) {
     
 
-    const [chart, setChart] =useState(Number(percentComplete))
+    const [chart, setChart] =useState(Number(percentComplete));
+
+    const barHeight = Math.max(5,(percentComplete/100)*30);
+    const dispLabel= barHeight>10;
 
   return (
-    <div className='barChart'></div>
+    <div className='barChart'
+    style={{
+        width:`${chart}%`,
+        height:`${barHeight}px`,
+        backgroundColor:customColor|| 'gray',
+        position:'relative',
+    }}
+    
+    title={project}
+
+    >
+{
+    dispLabel && (
+        <span className='project-label'>{project}</span>
+    )
+}
+
+    </div>
   )
 }
 
