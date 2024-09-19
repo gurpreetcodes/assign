@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
+
 
 function bar({project,percentComplete, customColor}) {
     
 
-    const [chart, setChart] =useState(Number(percentComplete));
+    const chart =Number(percentComplete);
 
     const barHeight = Math.max(5,(percentComplete/100)*30);
     const dispLabel= barHeight>10;
